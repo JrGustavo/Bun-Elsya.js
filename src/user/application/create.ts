@@ -1,7 +1,7 @@
 
 
 import type {IUser} from "../domain/IUser";
-import {IHash} from "../../services/interfaces/IHash";
+import {Hash} from "../../services/hash";
 
 export class CreateUser {
     constructor(
@@ -10,7 +10,7 @@ export class CreateUser {
     ){}
 
     async run(email: string, password: string) {
-        const hashedPassword = this.hash.hash(password);
+        const hashPassword = this.hash.hash(password);
         return await this.userRepository.create(email, password)
     }
 }

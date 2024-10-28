@@ -1,4 +1,4 @@
-import {t} from "elysia";
+import {t } from "Elysia"
 
 
 export const createUseDTO = {
@@ -16,3 +16,4 @@ export const loginUserDTO = {
         password: t.String()
     })
 }
+

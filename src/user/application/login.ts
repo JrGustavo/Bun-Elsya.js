@@ -1,12 +1,13 @@
 import type {IUser} from "../domain/IUser";
-import type {IHash} from "../../services/interfaces/IHash";
+import {IJWT} from "../../services/interfaces/IJWTS";
+import {Hash} from "../../services/hash";
 
 
 export class LoginUser {
-    constructor (
+    constructor(
         private userRepository: IUser,
-        private hash: IHash,
-        private jwt:  IJWT
+        private hash: Hash,
+        private jwt: IJWT
     ){}
 
     async run (email: string, password: string) {

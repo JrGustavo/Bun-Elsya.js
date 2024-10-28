@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import type {IHash} from './interfaces/IHash'
+
 
 
 export class Hash {
